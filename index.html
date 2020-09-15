@@ -25,30 +25,37 @@
 	{
 	"$schema": "https://vega.github.io/schema/vega-lite/v2.json",
 		
-	"data": {"url": "Combined.csv"},
+	"data": {"url": "Covid_Deaths_First_Digits_By_Country.json"},
 		
 	  "columns": 2,
 	  "concat": [
 	    {
 		"width": 500,
 		"height": 300,
-		"title": "Beer",
+		"title": "Benford's Law in Daily Covid Deaths by Country",
 	      "mark": 
 	      {
-		      "type": "line",
-	      	      "point": {"filled": "true"}
+		      "type": "bar"
 	      },
 	      "encoding": {
 		"x": {
-		  "field": "Year",
-		  "type": "temporal"
+		  "field": "Country",
+		  "type": "temporal",
+		  "title": "region"
 		},
 		"y": {
-		  "field": "Beer",
+		  "aggregate": "count",
 		  "type": "quantitative",
-		  "title": "Consumption Per Capita (litres of alcohol)"
+		  "title": "First Number of Daily Reported Deaths"
 		},
-		"color": {"field": "Country", "type": "nominal"}
+		"color": {
+			"field": "number", 
+			"type": "nominal",
+			"scale": {
+				"domain": ["1", "2", "3", "4", "5", "6", "7", "8", "9"],
+				"range": ["#e6194B", "#f58231", "#ffe119", "#bfef45", "#3cb44b", "#42d4f4", "#000075", "#911eb4", "#f032e6"]
+			}
+		}
 	      }
 	    },
 	    {
