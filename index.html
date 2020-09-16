@@ -39,9 +39,9 @@
 	      },
 	      "encoding": {
 		"x": {
-		  "field": "Country",
+		  "field": "country",
 		  "type": "temporal",
-		  "title": "region"
+		  "title": "Region"
 		},
 		"y": {
 		  "aggregate": "count",
@@ -56,28 +56,6 @@
 				"range": ["#e6194B", "#f58231", "#ffe119", "#bfef45", "#3cb44b", "#42d4f4", "#000075", "#911eb4", "#f032e6"]
 			}
 		}
-	      }
-	    },
-	    {
-		"width": 500,
-		"height": 300,
-		"title": "Wine",
-	      "mark": 
-	      {
-		      "type": "line",
-	      	      "point": {"filled": "true"}
-	      },
-	      "encoding": {
-		"x": {
-			"field": "Year",
-			"type": "temporal"
-		},
-		"y": {
-		  	"field": "Wine",
-			"type": "quantitative",
-		  	"title": "Consumption Per Capita (litres of alcohol)"
-		},
-		"color": {"field": "Country", "type": "nominal"}
 	      }
 	    }
 	  ]
