@@ -31,7 +31,6 @@
 		"height": 300,
 		"title": "Benford's Law in Daily Covid Deaths",
 		
-		"layer": [{
 	      "mark": 
 	      {
 		      "type": "bar"
@@ -43,8 +42,8 @@
 		  "title": "Region",
 		  "sort": ["Benford's Law", "World", "United Kingdom", "Spain", "Italy", "France", "Mexico", "India", "Argentina", "Peru", "Iran", "Brazil", "Chile", "Colombia", "South Africa", "Russia", "US"],
 		  "axis": {
-			"labelAngle": "45",
-			"labelFontWeight": "10"
+			"labelAngle": 45,
+			"labelFontWeight": "bold"
 			  }
 		},
 		"y": {
@@ -64,13 +63,6 @@
 			"scale": {"scheme": "tableau20"}
 		}
 	      }
-		},
-			  {
-				  "data": {"values": [{}]},
-				  "mark": {"type": "rule", "strokeDash": [2, 2], "size": 2},
-				  "encoding": {"y": {"datum": .699}}
-			  }
-			  }]
 	};
 
       // Embed the visualization in the container with id `vis`
