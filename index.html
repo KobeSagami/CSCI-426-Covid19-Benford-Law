@@ -25,55 +25,44 @@
 	{
 	"$schema": "https://vega.github.io/schema/vega-lite/v2.json",
 		
-	"data": {"url": "Combined.csv"},
+	"data": {"url": "benford_summed.csv"},
 		
-	  "columns": 2,
-	  "concat": [
-	    {
-		"width": 500,
+		"width": 1200,
 		"height": 300,
-		"title": "Beer",
+		"title": "Benford's Law in Daily Covid Deaths",
+		
 	      "mark": 
 	      {
-		      "type": "line",
-	      	      "point": {"filled": "true"}
+		      "type": "bar"
 	      },
 	      "encoding": {
 		"x": {
-		  "field": "Year",
-		  "type": "temporal"
+		  "field": "country",
+		  "type": "nominal",
+		  "title": "Region",
+		  "sort": ["Benford's Law", "World", "United Kingdom", "Spain", "Italy", "France", "Mexico", "India", "Argentina", "Peru", "Iran", "Brazil", "Chile", "Colombia", "South Africa", "Russia", "US"],
+		  "axis": {
+			"labelAngle": 45,
+			"labelFontWeight": "bold"
+			  }
 		},
 		"y": {
-		  "field": "Beer",
-		  "type": "quantitative",
-		  "title": "Consumption Per Capita (litres of alcohol)"
+		  "aggregate": "sum",
+		  "field": "count",
+		  "title": "First Number of Daily Reported Deaths",
+		  "stack": "normalize",
+		  "axis": {
+			  "labels": false,
+			  "grid": false,
+			  "ticks": false,
+			  "domain": false
+		  	  }
 		},
-		"color": {"field": "Country", "type": "nominal"}
+		"color": {
+			"field": "number", 
+			"scale": {"scheme": "tableau20"}
+		}
 	      }
-	    },
-	    {
-		"width": 500,
-		"height": 300,
-		"title": "Wine",
-	      "mark": 
-	      {
-		      "type": "line",
-	      	      "point": {"filled": "true"}
-	      },
-	      "encoding": {
-		"x": {
-			"field": "Year",
-			"type": "temporal"
-		},
-		"y": {
-		  	"field": "Wine",
-			"type": "quantitative",
-		  	"title": "Consumption Per Capita (litres of alcohol)"
-		},
-		"color": {"field": "Country", "type": "nominal"}
-	      }
-	    }
-	  ]
 	};
 
       // Embed the visualization in the container with id `vis`
