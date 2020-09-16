@@ -1,4 +1,13 @@
 country,number,count
+Benford's Law,1,30.1
+Benford's Law,2,17.6
+Benford's Law,3,12.5
+Benford's Law,4,9.7
+Benford's Law,5,7.9
+Benford's Law,6,6.7
+Benford's Law,7,5.8
+Benford's Law,8,5.1
+Benford's Law,9,4.6
 World,1,33
 World,2,39
 World,3,35
