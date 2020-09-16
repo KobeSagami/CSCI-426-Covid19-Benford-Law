@@ -31,6 +31,7 @@
 	"height": 300,
 	"title": "Benford's Law in Daily Covid Deaths",
 		
+	"layer": [{
 	"mark": {"type": "bar"},
 	"encoding": 
 	{
@@ -66,6 +67,15 @@
 			"scale": {"scheme": "tableau20"}
 		}
 	}
+	},
+	{
+		"data": {"values": [{}]},
+      		"mark": {"type": "rule", "strokeDash": [2, 2], "size": 2},
+      		"encoding": 
+		{
+        		"y": {"datum": 0.699}
+		}
+	}]
 };
 
       // Embed the visualization in the container with id `vis`
