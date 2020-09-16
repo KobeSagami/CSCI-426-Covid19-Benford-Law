@@ -41,16 +41,14 @@
 		  "title": "Region"
 		},
 		"y": {
-		  "aggregate": "count",
-		  "type": "quantitative",
+		  "aggregate": "sum",
+		  "field": "count",
 		  "title": "First Number of Daily Reported Deaths",
 		  "stack": "normalize"
 		},
 		"color": {
 			"field": "number", 
-			"type": "nominal",
 			"scale": {
-				"domain": ["1", "2", "3", "4", "5", "6", "7", "8", "9"],
 				"range": ["#e6194B", "#f58231", "#ffe119", "#bfef45", "#3cb44b", "#42d4f4", "#000075", "#911eb4", "#f032e6"]
 			}
 		}
