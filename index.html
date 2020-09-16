@@ -20,50 +20,53 @@
     <div id="vis"></div>
 
     <script>
-      // Assign the specification to a local variable vlSpec.
-      var vlSpec = 
+      // Assign the specification to a local variable vlSpecs
+	var vlSpec = 
 	{
 	"$schema": "https://vega.github.io/schema/vega-lite/v2.json",
 		
 	"data": {"url": "benford_summed.csv"},
 		
-		"width": 1200,
-		"height": 300,
-		"title": "Benford's Law in Daily Covid Deaths",
+	"width": 1200,
+	"height": 300,
+	"title": "Benford's Law in Daily Covid Deaths",
 		
-	      "mark": 
-	      {
-		      "type": "bar"
-	      },
-	      "encoding": {
-		"x": {
-		  "field": "country",
-		  "type": "nominal",
-		  "title": "Region",
-		  "sort": ["Benford's Law", "World", "United Kingdom", "Spain", "Italy", "France", "Mexico", "India", "Argentina", "Peru", "Iran", "Brazil", "Chile", "Colombia", "South Africa", "Russia", "US"],
-		  "axis": {
-			"labelAngle": 45,
-			"labelFontWeight": "bold"
-			  }
+	"mark": {"type": "bar"},
+	"encoding": 
+	{
+		"x": 
+		{
+			"field": "country",
+			"type": "nominal",
+			"title": "Region",
+			"sort": ["Benford's Law", "World", "United Kingdom", "Spain", "Italy", "France", "Mexico", "India", "Argentina", "Peru", "Iran", "Brazil", "Chile", "Colombia", "South Africa", "Russia", "US"],
+			"axis": 
+			{
+				"labelAngle": 45,
+				"labelFontWeight": "bold"
+			}
 		},
-		"y": {
-		  "aggregate": "sum",
-		  "field": "count",
-		  "title": "First Number of Daily Reported Deaths",
-		  "stack": "normalize",
-		  "axis": {
-			  "labels": false,
-			  "grid": false,
-			  "ticks": false,
-			  "domain": false
-		  	  }
+		"y": 
+		{
+			"aggregate": "sum",
+		 	"field": "count",
+		  	"title": "First Number of Daily Reported Deaths",
+		  	"stack": "normalize",
+		  	"axis": 
+			{
+			  	"labels": false,
+			  	"grid": false,
+			  	"ticks": false,
+			  	"domain": false
+			}
 		},
-		"color": {
+		"color": 
+		{
 			"field": "number", 
 			"scale": {"scheme": "tableau20"}
 		}
-	      }
-	};
+	}
+};
 
       // Embed the visualization in the container with id `vis`
       vegaEmbed('#vis', vlSpec);
