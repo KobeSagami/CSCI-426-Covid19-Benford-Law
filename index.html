@@ -26,111 +26,156 @@
 	"$schema": "https://vega.github.io/schema/vega-lite/v2.json",
 		
 	"data": {"url": "benford_summed.csv"},
-	"width": 1200,
-	"height": 300,
-	"title": "Benford's Law in Daily Covid Deaths",
 		
-	"layer": [{
-	"mark": {"type": "bar"},
-	"encoding": 
-	{
-		"x": 
+	"columns": 2,
+	"concat": [
 		{
-			"field": "country",
-			"type": "nominal",
-			"title": "Region",
-			"sort": ["Benford's Law", "Totals", "United Kingdom", "Spain", "Italy", "France", "Mexico", "India", "Argentina", "Peru", "Iran", "Brazil", "Chile", "Colombia", "South Africa", "Russia", "US"],
-			"axis": 
+		"width": 1200,
+		"height": 300,
+		"title": "Benford's Law in Daily Covid Deaths",
+
+		"layer": [{
+		"mark": {"type": "bar"},
+		"encoding": 
+		{
+			"x": 
 			{
-				"labelAngle": 45,
-				"labelFontWeight": "bold"
+				"field": "country",
+				"type": "nominal",
+				"title": "Region",
+				"sort": ["Benford's Law", "Totals", "United Kingdom", "Spain", "Italy", "France", "Mexico", "India", "Argentina", "Peru", "Iran", "Brazil", "Chile", "Colombia", "South Africa", "Russia", "US"],
+				"axis": 
+				{
+					"labelAngle": 45,
+					"labelFontWeight": "bold"
+				}
+			},
+			"y": 
+			{
+				"aggregate": "sum",
+				"field": "count",
+				"title": "First Number of Daily Reported Deaths",
+				"stack": "normalize",
+				"axis": 
+				{
+					"labels": false,
+					"grid": false,
+					"ticks": false,
+					"domain": false
+				}
+			},
+			"color": 
+			{
+				"field": "number", 
+				"scale": {"scheme": "tableau20"}
+			}
+		}
+		},
+		{
+			"data": {"values": [{}]},
+			"mark": {"type": "rule", "size": 1, "strokeDash": [1, 2]},
+			"encoding": 
+			{
+				"y": {"datum": 0.699}
 			}
 		},
-		"y": 
 		{
-			"aggregate": "sum",
-		 	"field": "count",
-		  	"title": "First Number of Daily Reported Deaths",
-		  	"stack": "normalize",
-		  	"axis": 
+			"data": {"values": [{}]},
+			"mark": {"type": "rule", "size": 1, "strokeDash": [1, 2]},
+			"encoding": 
 			{
-			  	"labels": false,
-			  	"grid": false,
-			  	"ticks": false,
-			  	"domain": false
+				"y": {"datum": 0.523}
 			}
 		},
-		"color": 
 		{
-			"field": "number", 
-			"scale": {"scheme": "tableau20"}
-		}
-	}
-	},
-	{
-		"data": {"values": [{}]},
-      		"mark": {"type": "rule", "size": 1, "strokeDash": [1, 2]},
-      		"encoding": 
+			"data": {"values": [{}]},
+			"mark": {"type": "rule", "size": 1, "strokeDash": [1, 2]},
+			"encoding": 
+			{
+				"y": {"datum": 0.398}
+			}
+		},
 		{
-        		"y": {"datum": 0.699}
-		}
-	},
-	{
-		"data": {"values": [{}]},
-      		"mark": {"type": "rule", "size": 1, "strokeDash": [1, 2]},
-      		"encoding": 
+			"data": {"values": [{}]},
+			"mark": {"type": "rule", "size": 1, "strokeDash": [1, 2]},
+			"encoding": 
+			{
+				"y": {"datum": 0.301}
+			}
+		},
 		{
-        		"y": {"datum": 0.523}
-		}
-	},
-	{
-		"data": {"values": [{}]},
-      		"mark": {"type": "rule", "size": 1, "strokeDash": [1, 2]},
-      		"encoding": 
+			"data": {"values": [{}]},
+			"mark": {"type": "rule", "size": 1, "strokeDash": [1, 2]},
+			"encoding": 
+			{
+				"y": {"datum": 0.222}
+			}
+		},
 		{
-        		"y": {"datum": 0.398}
-		}
-	},
-	{
-		"data": {"values": [{}]},
-      		"mark": {"type": "rule", "size": 1, "strokeDash": [1, 2]},
-      		"encoding": 
+			"data": {"values": [{}]},
+			"mark": {"type": "rule", "size": 1, "strokeDash": [1, 2]},
+			"encoding": 
+			{
+				"y": {"datum": 0.155}
+			}
+		},
 		{
-        		"y": {"datum": 0.301}
-		}
-	},
-	{
-		"data": {"values": [{}]},
-      		"mark": {"type": "rule", "size": 1, "strokeDash": [1, 2]},
-      		"encoding": 
+			"data": {"values": [{}]},
+			"mark": {"type": "rule", "size": 1, "strokeDash": [1, 2]},
+			"encoding": 
+			{
+				"y": {"datum": 0.097}
+			}
+		},
 		{
-        		"y": {"datum": 0.222}
-		}
-	},
-	{
-		"data": {"values": [{}]},
-      		"mark": {"type": "rule", "size": 1, "strokeDash": [1, 2]},
-      		"encoding": 
+			"data": {"values": [{}]},
+			"mark": {"type": "rule", "size": 1, "strokeDash": [1, 2]},
+			"encoding": 
+			{
+				"y": {"datum": 0.046}
+			}
+		}],
+		},
 		{
-        		"y": {"datum": 0.155}
-		}
-	},
-	{
-		"data": {"values": [{}]},
-      		"mark": {"type": "rule", "size": 1, "strokeDash": [1, 2]},
-      		"encoding": 
+		"width": 1200,
+		"height": 300,
+		"title": "Top 5 Matches to Benford's Law",
+
+		"mark": {"type": "bar"},
+		"encoding": 
 		{
-        		"y": {"datum": 0.097}
-		}
-	},
-	{
-		"data": {"values": [{}]},
-      		"mark": {"type": "rule", "size": 1, "strokeDash": [1, 2]},
-      		"encoding": 
-		{
-        		"y": {"datum": 0.046}
-		}
-	}]
+			"x": 
+			{
+				"field": "country",
+				"type": "nominal",
+				"title": "Region",
+				"axis": 
+				{
+					"domain": false,
+					"ticks": false,
+					"labelAngle": 45,
+					"labelFontWeight": "bold"
+				}
+			},
+			"y": 
+			{
+				"aggregate": "sum",
+				"field": "count",
+				"title": "Percent Difference from Benford's Law",
+				"axis": 
+				{
+					"labels": false,
+					"grid": false,
+					"ticks": false,
+					"domain": false
+				}
+			},
+			"color": 
+			{
+				"field": "number", 
+				"scale": {"scheme": "tableau20"}
+			}
+		}]
 };
 
       // Embed the visualization in the container with id `vis`
