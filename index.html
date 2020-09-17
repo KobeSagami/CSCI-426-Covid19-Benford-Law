@@ -30,111 +30,111 @@
 	"columns": 2,
 	"concat": [
 		{
-		"width": 1200,
-		"height": 300,
-		"title": "Benford's Law in Daily Covid Deaths",
+			"width": 1200,
+			"height": 300,
+			"title": "Benford's Law in Daily Covid Deaths",
 
-		"layer": [{
-		"mark": {"type": "bar"},
-		"encoding": 
-		{
-			"x": 
+			"layer": [{
+			"mark": {"type": "bar"},
+			"encoding": 
 			{
-				"field": "country",
-				"type": "nominal",
-				"title": "Region",
-				"sort": ["Benford's Law", "Totals", "United Kingdom", "Spain", "Italy", "France", "Mexico", "India", "Argentina", "Peru", "Iran", "Brazil", "Chile", "Colombia", "South Africa", "Russia", "US"],
-				"axis": 
+				"x": 
 				{
-					"labelAngle": 45,
-					"labelFontWeight": "bold"
+					"field": "country",
+					"type": "nominal",
+					"title": "Region",
+					"sort": ["Benford's Law", "Totals", "United Kingdom", "Spain", "Italy", "France", "Mexico", "India", "Argentina", "Peru", "Iran", "Brazil", "Chile", "Colombia", "South Africa", "Russia", "US"],
+					"axis": 
+					{
+						"labelAngle": 45,
+						"labelFontWeight": "bold"
+					}
+				},
+				"y": 
+				{
+					"aggregate": "sum",
+					"field": "count",
+					"title": "First Number of Daily Reported Deaths",
+					"stack": "normalize",
+					"axis": 
+					{
+						"labels": false,
+						"grid": false,
+						"ticks": false,
+						"domain": false
+					}
+				},
+				"color": 
+				{
+					"field": "number", 
+					"scale": {"scheme": "tableau20"}
+				}
+			}
+			},
+			{
+				"data": {"values": [{}]},
+				"mark": {"type": "rule", "size": 1, "strokeDash": [1, 2]},
+				"encoding": 
+				{
+					"y": {"datum": 0.699}
 				}
 			},
-			"y": 
 			{
-				"aggregate": "sum",
-				"field": "count",
-				"title": "First Number of Daily Reported Deaths",
-				"stack": "normalize",
-				"axis": 
+				"data": {"values": [{}]},
+				"mark": {"type": "rule", "size": 1, "strokeDash": [1, 2]},
+				"encoding": 
 				{
-					"labels": false,
-					"grid": false,
-					"ticks": false,
-					"domain": false
+					"y": {"datum": 0.523}
 				}
 			},
-			"color": 
 			{
-				"field": "number", 
-				"scale": {"scheme": "tableau20"}
-			}
-		}
-		},
-		{
-			"data": {"values": [{}]},
-			"mark": {"type": "rule", "size": 1, "strokeDash": [1, 2]},
-			"encoding": 
+				"data": {"values": [{}]},
+				"mark": {"type": "rule", "size": 1, "strokeDash": [1, 2]},
+				"encoding": 
+				{
+					"y": {"datum": 0.398}
+				}
+			},
 			{
-				"y": {"datum": 0.699}
-			}
-		},
-		{
-			"data": {"values": [{}]},
-			"mark": {"type": "rule", "size": 1, "strokeDash": [1, 2]},
-			"encoding": 
+				"data": {"values": [{}]},
+				"mark": {"type": "rule", "size": 1, "strokeDash": [1, 2]},
+				"encoding": 
+				{
+					"y": {"datum": 0.301}
+				}
+			},
 			{
-				"y": {"datum": 0.523}
-			}
-		},
-		{
-			"data": {"values": [{}]},
-			"mark": {"type": "rule", "size": 1, "strokeDash": [1, 2]},
-			"encoding": 
+				"data": {"values": [{}]},
+				"mark": {"type": "rule", "size": 1, "strokeDash": [1, 2]},
+				"encoding": 
+				{
+					"y": {"datum": 0.222}
+				}
+			},
 			{
-				"y": {"datum": 0.398}
-			}
-		},
-		{
-			"data": {"values": [{}]},
-			"mark": {"type": "rule", "size": 1, "strokeDash": [1, 2]},
-			"encoding": 
+				"data": {"values": [{}]},
+				"mark": {"type": "rule", "size": 1, "strokeDash": [1, 2]},
+				"encoding": 
+				{
+					"y": {"datum": 0.155}
+				}
+			},
 			{
-				"y": {"datum": 0.301}
-			}
-		},
-		{
-			"data": {"values": [{}]},
-			"mark": {"type": "rule", "size": 1, "strokeDash": [1, 2]},
-			"encoding": 
+				"data": {"values": [{}]},
+				"mark": {"type": "rule", "size": 1, "strokeDash": [1, 2]},
+				"encoding": 
+				{
+					"y": {"datum": 0.097}
+				}
+			},
 			{
-				"y": {"datum": 0.222}
-			}
-		},
-		{
-			"data": {"values": [{}]},
-			"mark": {"type": "rule", "size": 1, "strokeDash": [1, 2]},
-			"encoding": 
-			{
-				"y": {"datum": 0.155}
-			}
-		},
-		{
-			"data": {"values": [{}]},
-			"mark": {"type": "rule", "size": 1, "strokeDash": [1, 2]},
-			"encoding": 
-			{
-				"y": {"datum": 0.097}
-			}
-		},
-		{
-			"data": {"values": [{}]},
-			"mark": {"type": "rule", "size": 1, "strokeDash": [1, 2]},
-			"encoding": 
-			{
-				"y": {"datum": 0.046}
-			}
-		}],
+				"data": {"values": [{}]},
+				"mark": {"type": "rule", "size": 1, "strokeDash": [1, 2]},
+				"encoding": 
+				{
+					"y": {"datum": 0.046}
+				}
+			}]
 		},
 		{
 		"width": 1200,
@@ -175,6 +175,7 @@
 				"field": "number", 
 				"scale": {"scheme": "tableau20"}
 			}
+		}
 		}]
 };
 
