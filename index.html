@@ -25,11 +25,11 @@
 	{
 	"$schema": "https://vega.github.io/schema/vega-lite/v2.json",
 		
-	"data": {"url": "benford_summed.csv"},
 		
 	"columns": 2,
 	"concat": [
 		{
+			"data": {"url": "benford_summed.csv"},
 			"width": 1200,
 			"height": 300,
 			"title": "Benford's Law in Daily Covid Deaths",
@@ -137,6 +137,7 @@
 			}]
 		},
 		{
+		"data": {"url": "percent_difference_top.csv"},
 		"width": 1200,
 		"height": 300,
 		"title": "Top 5 Matches to Benford's Law",
