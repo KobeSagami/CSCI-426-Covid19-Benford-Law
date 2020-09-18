@@ -137,19 +137,19 @@
 			}]
 		},
 		{
-		"data": {"url": "percent_difference_top.csv"},
+		"data": {"url": "worst_5.csv"},
 		"width": 1200,
 		"height": 300,
-		"title": "Top 5 Matches to Benford's Law",
+		"title": "Worst 5 Matches to Benford's Law for the Number 1",
 
 		"mark": {"type": "bar"},
 		"encoding": 
 		{
 			"x": 
 			{
-				"field": "country",
+				"field": "Country",
 				"type": "nominal",
-				"title": "Region",
+				"title": "Country",
 				"axis": 
 				{
 					"domain": false,
@@ -160,8 +160,8 @@
 			},
 			"y": 
 			{
-				"aggregate": "distinct",
-				"field": "count",
+				"aggregate": "sum",
+				"field": "Difference in 1's expected",
 				"title": "Percent Difference from Benford's Law",
 				"axis": 
 				{
