@@ -1,0 +1,6 @@
+Determining top 5 countries that match law:
+
+- look at graph and determined which appeared to follow the law the best
+- took count percentage - Bedford law expected for each number for each country
+- looked at the countries with low percentage differences (+- 5%), did not include countries that had a positive difference >5 for 1, but did for negative differences >5 if the rest of the numbers showed small differences.
+- graphed in the same style as all countries --> easier to look at and see the similarity between country's number counts and benfords law.
