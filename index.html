@@ -161,6 +161,31 @@
 				"type": "quantitative",
 				"title": "Percent Difference from Benford's Law"
 			}
+		},
+		{
+		"data": {"url": "top_5.csv"},
+		"width": 1200,
+		"height": 300,
+		"title": "Top 5 Matches to Benford's Law for the Number 1",
+
+		"mark": {"type": "bar"},
+		"encoding": 
+		{
+			"x": 
+			{
+				"field": "Country",
+				"axis": 
+					{
+						"labelAngle": 0,
+						"labelFontWeight": "bold"
+					}
+			},
+			"y": 
+			{
+				"field": "Difference",
+				"type": "quantitative",
+				"title": "Percent Difference from Benford's Law"
+			}
 		}
 		}]
 };
